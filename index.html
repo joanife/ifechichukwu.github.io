@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&family=Monoton&family=Vast+Shadow&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .out-container {
+            font-family: 'Alegreya Sans', sans-serif;
+        }
+
+        .out-container, .intro-container {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .intro-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: 100vh;
+            position: relative;
+        }
+
+        .my-intro {
+            background-color: #ffffff;
+            padding: 20% 10%;
+            padding-left: 15%;
+            color: #14213d;
+        }
+
+        h1, h2, h3, p {
+            margin-block-start: 10px;
+            margin-block-end: 10px;
+        }
+
+        .my-intro h1 {
+            font-size: 50px;
+            font-weight: 900;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .my-intro h2 {
+            font-size: 36px;
+            font-weight: 800;
+            height: 36px;
+            line-height: 36px;
+        }
+
+        .my-intro h3 {
+            font-size: 20px;
+            font-weight: 700;
+            height: 24px;
+            line-height: 20px;
+            width: fit-content;
+            background-color: #fca311;
+            padding: 2px 6px;
+        }
+
+        .my-intro h1 > mark {
+            background-color: transparent;
+            color: #fca311;
+            font-family: 'Monoton', cursive;
+            font-size: 42px;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .my-intro button {
+            height: 40px;
+            width: 150px;
+            border-radius: 30px;
+            border: 0;
+            background-color: #fca311;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .intro-pic > img {
+            width: 600px;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        .icon-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 0;
+            height: 330px;
+            width: 48px;
+            background-color: #fca311;
+            position: absolute;
+            float: right;
+            right: 2%;
+            top: 16%;
+            border-radius: 25px;
+        }
+
+        .icon-links a {
+            margin: 8px 0;
+        }
+
+        .icon-links a:hover {
+            filter: brightness(0) invert(1);
+            width: 28px;
+            height: 28px;
+        }
+
+        .icon-links a:hover img {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+        }
+
+        .icon-links a:first-child {
+            filter: brightness(0) invert(1);
+        }
+    </style>
+</head>
+<body>
+        <div class="out-container">
+            <div class="intro-container" id="intro">
+                <div class="my-intro">
+                    <h2>
+                        HI THERE!
+                    </h2>
+
+                    <h1>
+                        I'M <mark>IFECHUKWU</mark>
+                    </h1>
+
+                    <h3>
+                        STUDENT
+                    </h3>
+
+                    <p>
+                        My name is Ifechukwu Uzoigwe. I am 30 years old. I am passionate about website 
+                        and software development. I have five years of experience in web development.
+                    </p>
+
+                    <button>
+                        MORE ABOUT ME
+                    </button>
+                </div>
+
+                <div class="intro-pic">
+                    <img src="./images/introPic.png" alt="">
+                </div>
+
+                <nav class="icon-links" id="user">
+                    <a href="./index.html"><img src="./images/home.png" alt=""></a>
+                    <a href="../html/about.html"><img src="./images/user.png" alt=""></a>
+                    <a href="../html/resume.html"><img src="./images/curriculum-vitae.png" alt=""></a>
+                    <a href="../html/portfolio.html"><img src="./images/portfolio.png" alt=""></a>
+                    <a href="../html/testimonial.html"><img src="./images/feedback.png" alt=""></a>
+                    <a href="../html/contact.html"><img src="./images/paper-plane.png" alt=""></a>
+                </nav>
+            </div>
+        </div>
+
+</body>
+</html>

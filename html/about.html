@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&family=Monoton&family=Vast+Shadow&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .outer-container {
+            font-family: 'Alegreya Sans', sans-serif;
+        }
+
+        .outer-container, .inner-container {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .inner-container {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            grid-template-rows: 100vh;
+            position: relative;
+            color: #14213d;
+        }
+
+        .side-pic {
+            width: 256px;
+            height: 30vh;
+        }
+
+        .side-pic > img {
+            width: 256px;
+            height: 30vh;
+            object-fit: cover;
+        }
+
+        .navigation {
+            background-color: #fca311;
+            width: 256px;
+            height: 70vh;
+            padding: 20% 0;
+        }
+
+        .navigation h2 {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .navigation h2 a {
+            text-decoration: none;
+            color: #14213d;
+        }
+
+        .navigation h2 a:hover {
+            color: #ffffff;
+            font-size: 24px;
+        }
+
+        .line {
+            height: 20px;
+            width: 1px;
+            background-color: #14213d;
+        }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #14213d;
+        }
+
+        .navigation h2, .navigation div {
+            margin: auto;
+        }
+
+        #user1 {
+            color: #ffffff;
+        }
+
+        .main-content {
+            background-color: #e5e5e5;
+            padding: 5% 0;
+        }
+
+        .main-content > h1 {
+            font-size: 60px;
+            text-align: center;
+            border: 1px solid #626262;
+            margin-left: 8%;
+            margin-right: 10%;
+            margin-block-start: 0px;
+            margin-block-end: 15px;
+        }
+
+        .main-content > h2, .main-content > p, .main-content > div, .main-content h3 {
+            margin: 0 10%;
+        }
+
+        .main-content > h2 {
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .main-content > h2 mark {
+            background-color: transparent;
+            font-weight: 800;
+            color: #14213d;
+        }
+
+        .main-content > p {
+            margin-block-start: 8px;
+            margin-block-end: 24px;
+            line-height: 18px;
+        }
+
+        .more-info {
+            display: grid;
+            grid-template-columns: 56% 35%;
+            grid-template-rows: 262px;
+            gap: 5%;
+        }
+
+        .numbers {
+            background-color: #14213d;
+            padding: 5% 0;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .num {
+            width: 50%;
+            height: 100%;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .first {
+            border-right: 2px solid #000000;
+        }
+
+        .sub-num {
+            height: 50%;
+            margin: 0 4%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .num .one {
+            border-bottom: 2px solid #000000;
+        }
+
+        .sub-num h2, .sub-num h3 {
+            text-align: center;
+        }
+
+        .sub-num h2 {
+            font-size: 30px;
+            color: #fca311;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+
+        .sub-num h3 {
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .icon-set {
+            display: grid;
+            grid-template-columns: 64px auto;
+            grid-template-rows: auto auto auto;
+            gap: 15px;
+        }
+
+        .icon-set p {
+            font-size: 14px;
+            margin-block-end: 0;
+            margin-block-start: 0;
+        }
+
+        .icon-set mark {
+            background-color: transparent;
+            color: #14213d;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .icon-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 0;
+            height: 330px;
+            width: 48px;
+            background-color: #fca311;
+            position: absolute;
+            float: right;
+            right: 2%;
+            top: 16%;
+            border-radius: 25px;
+        }
+
+        .icon-links a {
+            margin: 8px 0;
+        }
+
+        .icon-links a:hover {
+            filter: brightness(0) invert(1);
+            width: 28px;
+            height: 28px;
+        }
+
+        .icon-links a:hover img {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+        }
+
+        .icon-links a:nth-child(2) {
+            filter: brightness(0) invert(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-container">
+        <div class="inner-container" id="about">
+            <aside class="side-profile">
+                <div class="side-pic">
+                    <img src="../images/introPic.png" alt="">
+                </div>
+
+                <div class="navigation">
+                    <div class="dot"></div>
+                    <div class="section line"></div>
+                    <h2><a href="../index.html">HOME</a></h2>
+                    <div class="section line"></div>
+                    <h2><a href="../html/about.html" id="user1">ABOUT ME</a></h2>
+                    <div class="section line"></div>
+                    <h2><a href="../html/resume.html">RESUME</a></h2>
+                    <div class="section line"></div>
+                    <h2><a href="../html/portfolio.html">PORTFOLIO</a></h2>
+                    <div class="section line"></div>
+                    <h2><a href="../html/testimonial.html">TESTIMONIALS</a></h2>
+                    <div class="section line"></div>
+                    <h2><a href="../html/contact.html">CONTACT</a></h2>
+                    <div class="section line"></div>
+                    <div class="dot"></div>
+                </div>
+            </aside>
+
+            <article class="main-content">
+                <h1>
+                    ABOUT ME
+                </h1>
+
+                <h2>
+                    I'm <mark>Ifechukwu Uzoigwe,</mark> Student
+                </h2>
+
+                <p>
+                    Welcome everyone! My name is Ifechukwu Uzoigwe. I am 30 years old. I am passionate about website 
+                    and software development. I have five years of experience in web development. I am resourceful 
+                    and possess good analytical and logical skills.
+                </p>
+
+                <div class="more-info">
+                    <div class="numbers">
+                        <div class="num first">
+                            <div class="sub-num one">
+                                <h2>5+</h2>
+                                <h3>YEARS EXPERIENCE</h3>
+                            </div>
+                            <div class="sub-num two">
+                                <h2>200+</h2>
+                                <h3>HAPPY CLIENTS</h3>
+                            </div>
+                        </div>
+
+                        <div class="num second">
+                            <div class="sub-num one">
+                                <h2>350+</h2>
+                                <h3>PROJECTS DONE</h3>
+                            </div>
+                            <div class="sub-num two">
+                                <h2>45K</h2>
+                                <h3>FOLLOWERS</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="specialty">
+                        <h3>What I Do?</h3>
+                        <div class="icon-set">
+                            <div class="icon"><img src="../images/design (2).png" alt="Graphic design"></div>
+                            <p>
+                                <mark>GRAPHIC DESIGN</mark><br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptatem perspiciatis recusandae!
+                            </p>
+                            <div class="icon"><img src="../images/web-design (2).png" alt="Web design"></div>
+                            <p>
+                                <mark>WEB DESIGN</mark><br>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi soluta necessitatibus non.
+                            </p>
+                            <div class="icon"><img src="../images/photo.png" alt="Camera"></div>
+                            <p>
+                                <mark>PHOTOGRAPHY</mark><br>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore architecto reiciendis facere!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <nav class="icon-links" id="user">
+                <a href="../index.html"><img src="../images/home.png" alt=""></a>
+                <a href="../html/about.html"><img src="../images/user.png" alt=""></a>
+                <a href="../html/resume.html"><img src="../images/curriculum-vitae.png" alt=""></a>
+                <a href="../html/portfolio.html"><img src="../images/portfolio.png" alt=""></a>
+                <a href="../html/testimonial.html"><img src="../images/feedback.png" alt=""></a>
+                <a href="../html/contact.html"><img src="../images/paper-plane.png" alt=""></a>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>

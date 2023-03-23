@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .outer-container {
+            font-family: 'Alegreya Sans', sans-serif;
+        }
+
+        .outer-container, .inner-container {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .inner-container {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            grid-template-rows: 100vh;
+            position: relative;
+            color: #14213d;
+        }
+
+        .side-pic {
+            width: 256px;
+            height: 30vh;
+        }
+
+        .side-pic > img {
+            width: 256px;
+            height: 30vh;
+            object-fit: cover;
+        }
+
+        .navigation {
+            background-color: #fca311;
+            width: 256px;
+            height: 70vh;
+            padding: 20% 0;
+        }
+
+        .navigation h2 {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .navigation h2 a {
+            text-decoration: none;
+            color: #14213d;
+        }
+
+        .navigation h2 a:hover {
+            color: #ffffff;
+            font-size: 24px;
+        }
+
+        .line {
+            height: 20px;
+            width: 1px;
+            background-color: #14213d;
+        }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #14213d;
+        }
+
+        .navigation h2, .navigation div {
+            margin: auto;
+        }
+
+        #feedback1 {
+            color: #ffffff;
+        }
+
+        .main-content {
+            background-color: #e5e5e5;
+            padding: 5% 0;
+        }
+
+        .main-content > h1 {
+            font-size: 60px;
+            text-align: center;
+            border: 1px solid #626262;
+            margin-left: 8%;
+            margin-right: 10%;
+            margin-block-start: 0px;
+            margin-block-end: 15px;
+        }
+
+        .main-content > h2, .main-content > p, .main-content > div, .main-content h3 {
+            margin: 0 10%;
+        }
+
+        #testimonial {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .review {
+            background-color: #14213d;
+            color: #ffffff;
+            padding: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .review p {
+            font-size: 14px;
+            margin-left: 10px;
+            align-self: flex-start;
+            font-family: 'Vast Shadow', cursive;
+        }
+
+        .review figure {
+            margin: 0;
+        }
+
+        .review figcaption {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .review-pic {
+            width: 130px;
+            height: 130px;
+        }
+
+        .review-pic img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+        }
+
+        .icon-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 0;
+            height: 330px;
+            width: 48px;
+            background-color: #fca311;
+            position: absolute;
+            float: right;
+            right: 2%;
+            top: 16%;
+            border-radius: 25px;
+        }
+
+        .icon-links a {
+            margin: 8px 0;
+        }
+
+        .icon-links a:hover {
+            filter: brightness(0) invert(1);
+            width: 28px;
+            height: 28px;
+        }
+
+        .icon-links a:hover img {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+        }
+
+        .icon-links a:nth-child(5) {
+            filter: brightness(0) invert(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-container">
+        <div class="inner-container">
+            <aside class="side-profile">
+                <div class="side-pic">
+                    <img src="../images/introPic.png" alt="">
+                </div>
+
+                <div class="navigation">
+                    <div class="dot"></div>
+                    <div class="section line"></div>
+                    <h2><a href="../index.html">HOME</a></h2>
+                    <div class="section line"></div>
+                    <h2><a href="../html/about.html">ABOUT ME</a></h2>
+                    <div class="section line"></div>
+                    <h2><a href="../html/resume.html">RESUME</a></h2>
+                    <div class="section line"></div>
+                    <h2><a href="../html/portfolio.html">PORTFOLIO</a></h2>
+                    <div class="section line"></div>
+                    <h2><a href="../html/testimonial.html" id="feedback1">TESTIMONIALS</a></h2>
+                    <div class="section line"></div>
+                    <h2><a href="../html/contact.html">CONTACT</a></h2>
+                    <div class="section line"></div>
+                    <div class="dot"></div>
+                </div>
+            </aside>
+
+            <article class="main-content">
+                <h1>
+                    TESTIMONIALS
+                </h1>
+
+                <div id="testimonial">
+                    <div class="review">
+                        <figure>
+                            <div class="review-pic"><img src="../images/review1 (1).png" alt=""></div>
+                            <figcaption>Vance Joshua</figcaption>
+                        </figure>
+                        
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus doloremque natus quasi, 
+                            illum itaque voluptatum?
+                        </p>
+                    </div>
+
+                    <div class="review">
+                        <figure>
+                            <div class="review-pic"><img src="../images/review1 (2).png" alt=""></div>
+                            <figcaption>David Ross</figcaption>
+                        </figure>
+                        
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae laboriosam aperiam 
+                            hic quos excepturi tenetur.</p>
+                    </div>
+
+                    <div class="review">
+                        <figure>
+                            <div class="review-pic"><img src="../images/review1 (3).png" alt=""></div>
+                            <figcaption>Josh Scotts</figcaption>
+                        </figure>
+                        
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tempore repellat laudantium 
+                            ducimus libero nam?</p>
+                    </div>
+
+                    <div class="review">
+                        <figure>
+                            <div class="review-pic"><img src="../images/review1 (4).png" alt=""></div>
+                            <figcaption>Lilian Mishka</figcaption>
+                        </figure>
+                        
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro id, praesentium 
+                            exercitationem explicabo ut et?</p>
+                    </div>
+                </div>
+            </article>
+
+            <nav class="icon-links" id="user">
+                <a href="../index.html"><img src="../images/home.png" alt=""></a>
+                <a href="../html/about.html"><img src="../images/user.png" alt=""></a>
+                <a href="../html/resume.html"><img src="../images/curriculum-vitae.png" alt=""></a>
+                <a href="../html/portfolio.html"><img src="../images/portfolio.png" alt=""></a>
+                <a href="../html/testimonial.html"><img src="../images/feedback.png" alt=""></a>
+                <a href="../html/contact.html"><img src="../images/paper-plane.png" alt=""></a>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>
+</body>
+</html>
